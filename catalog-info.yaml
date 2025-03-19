@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: oyfvjax3w-python-gitops
+  description: This is GitOps manifest for oyfvjax3w-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=oyfvjax3w-python
+    backstage.io/kubernetes-id: oyfvjax3w-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: oyfvjax3w-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:oyfvjax3w-python
